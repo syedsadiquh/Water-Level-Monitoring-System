@@ -1,5 +1,4 @@
-
-![SCR-20230730-sfyz](https://github.com/syedsadiquh/Water-Level-Monitoring-System/assets/49514406/91192e4c-4238-427a-b0cd-b00c9be99557)# Water-Level-Monitoring-System
+# Water-Level-Monitoring-System
 ## Introduction 
 This open-source Project will measure the water level in a tank and show its percentage using an HC-SR04 ultrasonic distance sensor. This project uses WE10 WiFi module to give this board WiFi Functionality to push the percentage data to a mqtt cloud.
 This Project uses a RuggedBoard A5D2x, a SBC which is devloped by the Rugged Board Group and other components that are mentioned above.
