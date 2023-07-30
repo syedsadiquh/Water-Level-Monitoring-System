@@ -136,7 +136,7 @@ void gpio_init()
 
 void wifi_init()
 {
-        sprintf(buffer, "CMD+RESET\r\n");
+    sprintf(buffer, "CMD+FACRESET\r\n");
 	mraa_uart_write(wifi, buffer, sizeof(buffer));
 	
 	sleep(2);
@@ -144,16 +144,17 @@ void wifi_init()
 	sprintf(buffer, "CMD+UARTCONF=38400,8,1,0,0,1\r\n");
 	mraa_uart_write(wifi, buffer, sizeof(buffer));
 
-	sleep(2);
+	sleep(1);
 
 	sprintf(buffer, "CMD+WIFIMODE=1\r\n");
 	mraa_uart_write(wifi, buffer, sizeof(buffer));
-	sleep(2);
+	sleep(1);
+
 	// SSID, Password (here, the network is open)
-	sprintf(buffer, "CMD+CONTOAP=realmesyed,");
+	sprintf(buffer, "CMD+CONTOAP=realmesyed,\r\n");
 	mraa_uart_write(wifi, buffer, sizeof(buffer));
 
-	sleep(3);
+	sleep(6);
 
 	printf("Wifi code executed\n");
 }
